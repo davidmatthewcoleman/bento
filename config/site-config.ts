@@ -111,7 +111,7 @@ const GridItems: GridItemInterface[] = [
     icon: "fanfiction",
     username: "@crossrambles",
     buttonTitle: "Favorite",
-    buttonLink: "https://fanfiction.net",
+    buttonLink: "https://www.fanfiction.net/u/6045527/WolfheadTV",
     buttonSecondaryText: "",
     color: "#4152B4",
   },
