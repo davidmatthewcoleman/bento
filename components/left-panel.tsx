@@ -8,7 +8,7 @@ const LeftPanel = () => {
   return (
     <div
       key="left-panel"
-      className="flex flex-col justify-between py-6 xl:max-w-sm xl:py-10 xl:h-full"
+      className="flex flex-col self-start justify-between py-6 xl:max-w-sm xl:py-10 xl:sticky top-0 z-20"
     >
       {/* Top Container */}
       <div>
@@ -18,10 +18,11 @@ const LeftPanel = () => {
             loading="eager"
             alt="avatar"
             placeholder="blur"
-            src="/pp-new3.png"
+            src="/profile.jpg"
             width={120}
             height={120}
             blurDataURL="/pp-new3.png"
+            className={`rounded-full`}
           />
         </div>
 

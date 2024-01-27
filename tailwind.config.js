@@ -30,10 +30,7 @@ module.exports = {
         3: "3rem",
         2: "2rem",
         1: "1rem",
-      },
-      boxShadow: {
-        grid: "0px 4px 10px 0px rgba(0, 0, 0, 0.05);",
-      },
+      }
     },
   },
   plugins: [require("@tailwindcss/container-queries")],

@@ -1,10 +1,11 @@
 "use client";
 import { cn } from "@/utils/cn";
+import getLuma from "@/utils/luma";
 import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion";
 
 const variants = cva(
-  "shadow-grid rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center @container",
+  "card shadow-xl shadow-black/15 rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center @container",
   {
     variants: {
       size: {
@@ -21,11 +22,14 @@ const variants = cva(
   }
 );
 
-export type GridItemProps = { children: React.ReactNode } & VariantProps<
-  typeof variants
->;
+export type GridItemProps = {
+    children: React.ReactNode,
+    color: string
+} & VariantProps<typeof variants>;
 
-const GridItem = ({ size, children }: GridItemProps) => {
+const GridItem = ({ size, children, color }: GridItemProps) => {
+  const luma = getLuma(color ? color : '#000000');
+  const style = { "--accent": color ? color : 'transparent' } as React.CSSProperties;
   return (
     <motion.div
       initial={{
@@ -37,9 +41,10 @@ const GridItem = ({ size, children }: GridItemProps) => {
         variants({
           size,
           className:
-            "hover:dark:bg-neutral-800 hover:bg-neutral-50 duration-75 transition-colors ease-in-out",
+            `hover:dark:bg-neutral-800 hover:bg-neutral-50 duration-75 transition-colors ease-in-out [&_.txt]:transition-colors ${luma ? '[&_.txt]:hover:text-white' : '[&_.txt]:hover:text-black'}`,
         })
       )}
+      style={style}
     >
       {children}
     </motion.div>

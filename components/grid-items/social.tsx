@@ -1,9 +1,10 @@
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import Button from "../button";
 import Icon from "../icon";
-import { GridItemInterface } from "./../../config/site-config";
+import { GridItemInterface } from "./../../config/site-config"
 
-const Social = ({ item }: { item: GridItemInterface }) => {
+const Social = async ({ item }: { item: GridItemInterface }) => {
   return (
     <Link href={item.buttonLink ?? ""}>
       {/* Header */}
@@ -19,12 +20,12 @@ const Social = ({ item }: { item: GridItemInterface }) => {
       </div>
       {/* Content */}
       <div className="mt-2">
-        <div className="@lg:text-lg font-semibold line-clamp-1">
+        <div className="@lg:text-lg font-semibold line-clamp-1 txt">
           {item.title}
         </div>
-        <div className="text-sm text-neutral-500">{item.username}</div>
+        <div className="text-sm text-neutral-500 txt">{item.username}</div>
         {item.description && (
-          <div className="mt-1 text-sm text-neutral-500 line-clamp-2">
+          <div className="mt-1 text-sm text-neutral-500 line-clamp-2 txt">
             {item.description}
           </div>
         )}

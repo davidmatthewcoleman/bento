@@ -7,6 +7,8 @@ import Equipments from "./grid-items/equipments";
 import Mentor from "./grid-items/mentor";
 import Project from "./grid-items/project";
 import Social from "./grid-items/social";
+import Map from "./grid-items/map";
+import Video from "./grid-items/video";
 
 const RightPanel = () => {
   const [scope, animate] = useAnimate();
@@ -37,11 +39,11 @@ const RightPanel = () => {
   return (
     <div
       ref={scope}
-      className="grid w-full grid-cols-4 xl:gap-10 gap-6 xl:py-10 py-6 xl:px-1 xl:overflow-y-auto auto-rows-[76px]"
+      className="grid w-full h-full grid-cols-4 xl:gap-10 gap-6 xl:py-10 py-6 xl:px-1 auto-rows-[76px]"
     >
       {siteConfig.items.map((item, index) => {
         return (
-          <GridItem key={item.title + item.type + index} size={item.layout}>
+          <GridItem key={item.title + item.type + index} size={item.layout} color={item.color as string}>
             {item.type === "social" ? (
               <Social item={item} />
             ) : item.type === "mentor" ? (
@@ -50,6 +52,10 @@ const RightPanel = () => {
               <Project item={item} />
             ) : item.type === "equipment" ? (
               <Equipments item={item} />
+            ) : item.type === "map" ? (
+              <Map item={item} />
+            ) : item.type === "video" ? (
+                <Video item={item} />
             ) : (
               <div>Need to create new component type.</div>
             )}
