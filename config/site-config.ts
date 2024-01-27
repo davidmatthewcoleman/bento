@@ -91,6 +91,20 @@ const GridItems: GridItemInterface[] = [
       'Adventurer of Pixels, Architect of Code, Dreamer. Autistic, Brony & Furry. From \"Inheritance\" to \"LOTR\" and \"Nightwish\", I paint digital realms on Cross Rambles. Helluva Boss Loona fan, gaming in Skyrim/Fallout. Dreaming of a Syncro nomad life.',
   },
   {
+    layout: "2x2",
+    type: "social",
+    title: "Buy me a coffee",
+    username: "@davidmc.io",
+    description:
+        "Help support me in my endeavors.",
+    icon: "coffee",
+    buttonTitle: "Support",
+    buttonSecondaryText: "",
+    buttonLink:
+        "https://buymeacoffee.com/davidmc.io",
+    color: '#EC6738',
+  },
+  {
     layout: "1x2",
     type: "social",
     title: "FanFiction",
@@ -111,20 +125,6 @@ const GridItems: GridItemInterface[] = [
     buttonLink: "https://deviantart.com/crossrambles",
     buttonSecondaryText: "",
     color: "#05cc47",
-  },
-  {
-    layout: "2x2",
-    type: "social",
-    title: "Buy me a coffee",
-    username: "@davidmc.io",
-    description:
-        "Help support me in my endeavors.",
-    icon: "coffee",
-    buttonTitle: "Support",
-    buttonSecondaryText: "",
-    buttonLink:
-        "https://buymeacoffee.com/davidmc.io",
-    color: '#EC6738',
   },
   {
     layout: "2x4",
