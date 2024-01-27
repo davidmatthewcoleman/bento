@@ -5,7 +5,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { motion } from "framer-motion";
 
 const variants = cva(
-  "card shadow-xl shadow-black/15 rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center @container",
+  "shadow-xl shadow-black/15 rounded-3xl bg-white dark:bg-neutral-900 flex flex-col justify-center @container",
   {
     variants: {
       size: {
@@ -41,12 +41,20 @@ const GridItem = ({ size, children, color }: GridItemProps) => {
         variants({
           size,
           className:
-            `hover:dark:bg-neutral-800 hover:bg-neutral-50 duration-75 transition-colors ease-in-out [&_.txt]:transition-colors ${luma ? '[&_.txt]:hover:text-white' : '[&_.txt]:hover:text-black'}`,
+            `card hover:dark:bg-neutral-800 hover:bg-neutral-50 duration-75 transition-colors ease-in-out [&_.txt]:transition-colors ${luma ? '[&_.txt]:hover:text-white' : '[&_.txt]:hover:text-black'}`,
         })
       )}
       style={style}
     >
-      {children}
+        <div className={cn(
+            variants({
+                size,
+                className:
+                    `block card-inner`,
+            })
+        )}>
+            {children}
+        </div>
     </motion.div>
   );
 };

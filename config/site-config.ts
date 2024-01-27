@@ -29,7 +29,7 @@ export interface GridItemInterface {
   imageLight?: string;
   imageDark?: string;
   /* Video */
-  video?: string;
+  video?: any;
 }
 
 const GridItems: GridItemInterface[] = [
@@ -72,7 +72,10 @@ const GridItems: GridItemInterface[] = [
     layout: "2x4",
     type: "video",
     title: "RIP Trudy, 2010 – 2024",
-    video: "/trudy.webm",
+    video: {
+      webm: "/trudy.webm",
+      mp4: "/trudy.mp4"
+    },
   },
   {
     layout: "2x2",

@@ -1,5 +1,4 @@
 import { GridItemInterface } from "@/config/site-config";
-import Image from "next/image";
 
 const Video = ({ item }: { item: GridItemInterface }) => {
     return (
@@ -16,8 +15,8 @@ const Video = ({ item }: { item: GridItemInterface }) => {
                 playsInline
                 preload="none" // This helps with lazy loading
             >
-                <source src={item.video} type="video/webm"/>
-                <source src={item.video} type="video/mp4"/>
+                <source src={item.video.webm} type="video/webm"/>
+                <source src={item.video.mp4} type="video/mp4"/>
             </video>
             {/* Content */}
             <div className={`relative z-20 w-full p-4 space-y-3 md:p-8`}>
