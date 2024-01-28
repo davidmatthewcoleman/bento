@@ -9,9 +9,9 @@ const variants = cva(
   {
     variants: {
       size: {
-        "1x2": "md:col-span-1 col-span-2 row-span-2 md:p-8 p-4",
-        "2x1": "md:col-span-2 col-span-full row-span-1 py-4 md:px-8 px-4",
-        "2x2": "md:col-span-2 col-span-full row-span-2 md:p-8 p-4",
+        "1x2": "md:col-span-1 col-span-2 row-span-2 md:[&_.cardpad]:p-8 [&_.cardpad]:p-4",
+        "2x1": "md:col-span-2 col-span-full row-span-1 [&_.cardpad]:py-4 md:[&_.cardpad]:px-8 [&_.cardpad]:px-4",
+        "2x2": "md:col-span-2 col-span-full row-span-2 md:[&_.cardpad]:p-8 [&_.cardpad]:p-4",
         "2x4":
           "md:col-span-2 col-span-full row-span-4 relative overflow-hidden",
       },
@@ -41,18 +41,12 @@ const GridItem = ({ size, children, color }: GridItemProps) => {
         variants({
           size,
           className:
-            `card hover:dark:bg-neutral-800 hover:bg-neutral-50 duration-75 transition-colors ease-in-out [&_.txt]:transition-colors ${luma ? '[&_.txt]:hover:text-white' : '[&_.txt]:hover:text-black'}`,
+            `card duration-75 transition-colors ease-in-out [&_.txt]:transition-colors ${luma ? '[&_.txt]:hover:text-white' : '[&_.txt]:hover:text-black'}`,
         })
       )}
       style={style}
     >
-        <div className={cn(
-            variants({
-                size,
-                className:
-                    `block card-inner`,
-            })
-        )}>
+        <div className={`block card-inner dark:bg-neutral-900 bg-neutral-50`}>
             {children}
         </div>
     </motion.div>

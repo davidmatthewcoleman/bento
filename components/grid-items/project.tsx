@@ -7,7 +7,7 @@ const Project = ({ item }: { item: GridItemInterface }) => {
   return (
     <Link
       href={item.buttonLink ?? ""}
-      className="flex items-center justify-between gap-4"
+      className="cardpad flex items-center justify-between gap-4"
     >
       {item.icon && <Icon type={item.icon} color={item.color} />}
       <div className="w-full @lg:text-lg  font-semibold">{item.title}</div>

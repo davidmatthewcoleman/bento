@@ -6,7 +6,7 @@ import { GridItemInterface } from "./../../config/site-config"
 
 const Social = async ({ item }: { item: GridItemInterface }) => {
   return (
-    <Link href={item.buttonLink ?? ""}>
+    <Link className={`cardpad`} href={item.buttonLink ?? ""}>
       {/* Header */}
       <div className="flex items-center justify-between">
         {item.icon && <Icon type={item.icon} color={item.color ?? "#fff"} />}

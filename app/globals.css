@@ -8,7 +8,7 @@
   }
 
   .card {
-    @apply relative overflow-hidden pointer-events-none;
+    @apply relative overflow-hidden;
   }
   .card .card-inner::before {
     content: "";
@@ -32,20 +32,21 @@
     inset: -2000% -5000% 0;
   }
   .card .card-inner > *:not(.absolute) {
-    @apply relative pointer-events-auto z-10;
+    @apply relative z-10;
   }
   .card .card-inner::after {
     content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 20;
-    pointer-events: none;
-    @apply rounded-3xl border border-white dark:border-neutral-500 mix-blend-overlay dark:mix-blend-color-dodge opacity-50 dark:opacity-100;
+    @apply absolute inset-0 rounded-3xl border border-white dark:border-neutral-500 mix-blend-overlay dark:mix-blend-color-dodge opacity-50 dark:opacity-100 z-20 pointer-events-none;
   }
 
   .card .card-inner {
-    @apply absolute inset-0;
+    @apply block;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
+  }
+
+  .card .card-inner,
+  .card .cardpad {
+    @apply block min-h-full;
   }
 
   .map-title {

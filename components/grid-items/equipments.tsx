@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Equipments = ({ item }: { item: GridItemInterface }) => {
   return (
-    <div className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl">
+    <div className="cardpad flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl">
       {/* Overlay */}
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950/90" />
       {/* Image */}

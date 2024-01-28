@@ -18,7 +18,7 @@ const Video = ({ item }: { item: GridItemInterface }) => {
 
     return (
         <div
-            className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl"
+            className="cardpad flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
@@ -38,7 +38,7 @@ const Video = ({ item }: { item: GridItemInterface }) => {
                 <source src={item.video.mp4} type="video/mp4"/>
             </video>
             {/* Content */}
-            <div className={`relative z-20 w-full p-4 space-y-3 md:p-8`}>
+            <div className={`absolute inset-0 top-auto z-20 w-full p-4 space-y-3 md:p-8`}>
                 <div
                     className="map-title flex flex-row items-center gap-1 text-sm font-medium text-white bg-black/50 border border-black max-w-max backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
                     {item.title}

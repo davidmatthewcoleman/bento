@@ -4,7 +4,7 @@ import {MapPin} from "lucide-react";
 
 const Map = ({ item }: { item: GridItemInterface }) => {
     return (
-        <div className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl">
+        <div className="cardpad flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl">
             {/* Image */}
             <Image
                 className="z-0 object-cover object-center w-full h-full block dark:hidden"
