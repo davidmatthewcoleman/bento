@@ -191,7 +191,7 @@ const Icons: {
   blog: (
       <Image
           alt={`Blog`}
-          src={`/blog.jpg`}
+          src={`/blog.png`}
           width={48}
           height={48}
           className={`block`}

@@ -81,15 +81,15 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "2x2",
     type: "social",
-    title: "Twentyseven Degrees North",
+    title: "Cross Rambles",
     icon: "blog",
-    username: "",
+    username: "crossrambles.com",
     buttonTitle: "Visit",
-    buttonLink: "https://blog.davidmc.io",
+    buttonLink: "https://crossrambles.com",
     buttonSecondaryText: "",
-    color: "#F9D236",
+    color: "#F38A31",
     description:
-      'Adventurer of Pixels, Architect of Code, Dreamer. Autistic, Brony & Furry. From \"Inheritance\" to \"LOTR\" and \"Nightwish\", I paint digital realms on Cross Rambles. Helluva Boss Loona fan, gaming in Skyrim/Fallout. Dreaming of a Syncro nomad life.',
+      'My personal blog where I discuss whatever interests me.',
   },
   {
     layout: "2x2",
