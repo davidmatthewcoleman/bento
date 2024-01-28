@@ -1,19 +1,38 @@
 import { GridItemInterface } from "@/config/site-config";
+import React, { useRef } from 'react';
 
 const Video = ({ item }: { item: GridItemInterface }) => {
+    const videoRef = useRef(null) as any;
+
+    const handleMouseEnter = () => {
+        if (videoRef.current) {
+            videoRef.current.play();
+        }
+    };
+
+    const handleMouseLeave = () => {
+        if (videoRef.current) {
+            videoRef.current.pause();
+        }
+    };
+
     return (
-        <div className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl">
+        <div
+            className="flex flex-col items-end justify-end w-full h-full overflow-hidden rounded-3xl"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+        >
             {/* Overlay */}
             <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-neutral-950/60 to-neutral-950/90 opacity-90"/>
             {/* Image */}
             <video
-                id="background"
+                ref={videoRef}
                 className="absolute inset-0 z-0 object-cover object-center w-full h-full block"
-                autoPlay
                 loop
                 muted
                 playsInline
                 preload="none" // This helps with lazy loading
+                poster={item.video.poster}
             >
                 <source src={item.video.webm} type="video/webm"/>
                 <source src={item.video.mp4} type="video/mp4"/>

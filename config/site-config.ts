@@ -74,7 +74,8 @@ const GridItems: GridItemInterface[] = [
     title: "RIP Trudy, 2010 – 2024",
     video: {
       webm: "/trudy.webm",
-      mp4: "/trudy.mp4"
+      mp4: "/trudy.mp4",
+      poster: "/trudy.jpg",
     },
   },
   {
