@@ -60,13 +60,13 @@ const GridItems: GridItemInterface[] = [
   {
     layout: "1x2",
     type: "social",
-    title: "Facebook",
-    icon: "facebook",
+    title: "Instagram",
+    icon: "instagram",
     username: "@crossrambles",
-    buttonTitle: "Like",
+    buttonTitle: "Follow",
     buttonSecondaryText: "",
-    buttonLink: "https://facebook.com/crossrambles",
-    color: "#1877f2",
+    buttonLink: "https://instagram.com/crossrambles",
+    color: "#c13584",
   },
   {
     layout: "2x4",
