@@ -21,7 +21,7 @@ const Equipments = ({ item }: { item: GridItemInterface }) => {
         fill
       />
       {/* Content */}
-      <div className={`relative z-20 w-full p-4 space-y-3 md:p-8`}>
+      <div className={`absolute inset-0 top-auto z-20 w-full p-4 space-y-3 md:p-8`}>
         <div className="text-sm font-medium text-white">{item.title}</div>
           {item.equipments && (
               <div className="flex flex-wrap items-center gap-3">
