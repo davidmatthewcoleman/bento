@@ -19,7 +19,7 @@ const Map = ({ item }: { item: GridItemInterface }) => {
                 fill
             />
             {/* Content */}
-            <div className={`relative z-20 w-full p-4 space-y-3 md:p-8`}>
+            <div className={`absolute inset-0 top-auto z-20 w-full p-4 space-y-3 md:p-8`}>
                 <div className="map-title flex flex-row items-center gap-1 text-sm font-medium text-black dark:text-white bg-white/50 dark:bg-black/50 border border-neutral-200 dark:border-black max-w-max backdrop-blur-sm px-2.5 py-1 rounded-full shadow-sm">
                     <MapPin size="14" />
                     {item.title}
