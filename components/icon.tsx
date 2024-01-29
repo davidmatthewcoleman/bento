@@ -221,7 +221,7 @@ const Icon = ({type, color = "#fff"}: { type: string; color?: string }) => {
           style={{
             backgroundColor: color,
           }}
-          className={`w-10 h-10 flex items-center justify-center rounded-lg shadow-grid shrink-0 overflow-hidden`}
+          className={`w-10 h-10 flex items-center justify-center shadow-grid shrink-0 overflow-hidden mask-squircle`}
       >
         {Icons[type]}
       </div>

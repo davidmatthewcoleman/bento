@@ -60,4 +60,9 @@
     pointer-events: none;
     @apply rounded-full border border-neutral-500 mix-blend-overlay dark:mix-blend-color-dodge;
   }
+
+  .mask-squircle {
+    -webkit-mask-image: url(/squircle.svg);
+    mask-image: url(/squircle.svg);
+  }
 }
