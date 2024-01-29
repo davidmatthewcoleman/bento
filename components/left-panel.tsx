@@ -11,19 +11,22 @@ const LeftPanel = () => {
       className="flex flex-col self-start justify-between py-6 xl:max-w-sm xl:py-10 xl:sticky top-0 z-20"
     >
       {/* Top Container */}
-      <div>
-        <div>
+      <div className={`drop-shadow-xl`}>
+        <div className={`relative mask-squircle max-w-max`}>
           <Image
-            priority
-            loading="eager"
-            alt="avatar"
-            placeholder="blur"
-            src="/profile.jpg"
-            width={120}
-            height={120}
-            blurDataURL="/pp-new3.png"
-            className={`rounded-full`}
+              priority
+              loading="eager"
+              alt="avatar"
+              placeholder="blur"
+              src="/profile.jpg"
+              width={120}
+              height={120}
+              blurDataURL="/profile.jpg"
+              className={`block`}
           />
+          <svg xmlns="http://www.w3.org/2000/svg" className={`absolute inset-0 fill-transparent stroke-[1px] stroke-neutral-500 mix-blend-color-dodge`} viewBox="0 0 90 90">
+            <path d="M45 0C9 0 0 9 0 45s9 45 45 45 45-9 45-45S81 0 45 0Z"/>
+          </svg>
         </div>
 
         {/* Text Container */}
