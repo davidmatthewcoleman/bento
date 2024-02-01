@@ -24,7 +24,7 @@ const LeftPanel = () => {
               blurDataURL="/profile.jpg"
               className={`block`}
           />
-          <svg xmlns="http://www.w3.org/2000/svg" className={`absolute inset-0 fill-transparent stroke-[1px] stroke-neutral-500 mix-blend-color-dodge`} viewBox="0 0 90 90">
+          <svg xmlns="http://www.w3.org/2000/svg" className={`absolute inset-0 fill-transparent stroke-[1px] stroke-neutral-500 mix-blend-color-dodge pointer-events-none`} viewBox="0 0 90 90">
             <path d="M45 0C9 0 0 9 0 45s9 45 45 45 45-9 45-45S81 0 45 0Z"/>
           </svg>
         </div>
